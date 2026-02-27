@@ -23,6 +23,11 @@ h1 {
     font-family: "Garamond";
 }
 
+h2 {
+    color: #758467;
+    margin-bottom: 1%;
+}
+
 .logo {
     overflow: clip;
     height: 150px
@@ -35,7 +40,7 @@ h1 {
 .date {
     vertical-align: bottom;
     text-align: right;
-    color:#DFE6DA
+    color: #DFE6DA
 }
 
 .banner-table {
@@ -61,24 +66,24 @@ td {
 footer {
     background-color: #9CAF88;
     font-family: "Garamond";
-    color:#DFE6DA
-
+    color: #DFE6DA
 }
 
-.footerp{
+.footerp {
     overflow: clip;
     height: 150px;
     padding-top: 0;
 }
 
 label {
-  white-space: nowrap; 
-  display: inline-block; 
+    white-space: nowrap;
+    display: inline-block;
 }
 
-.container{
+.container {
     display: flex;
-    p{
+
+    p {
         padding: 0 5 0 0;
     }
 }
