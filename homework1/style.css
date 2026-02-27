@@ -1,0 +1,84 @@
+/* 
+Program name: patient-form.html
+Author: Misa Huynh
+Date created: 02/24/2026
+Date last edited: 02/24/2026
+Version: 1.0
+Description: Patient Registration Form for thwe medical industry
+ */
+
+p {
+    color: #758467;
+    font-family: "Times New Roman";
+    margin: auto;
+}
+
+
+body {
+    background-color: #DFE6DA;
+}
+
+h1 {
+    color: #DFE6DA;
+    font-family: "Garamond";
+}
+
+.logo {
+    overflow: clip;
+    height: 150px
+}
+
+.banner {
+    background-color: #819171;
+}
+
+.date {
+    vertical-align: bottom;
+    text-align: right;
+    color:#DFE6DA
+}
+
+.banner-table {
+    width: 100%;
+}
+
+.table-label {
+    text-align: right;
+    align-items: center;
+}
+
+td {
+    /* border-style: solid; */
+    overflow: hidden;
+    min-width: 100px;
+}
+
+.range-slider {
+    width: 80%;
+    accent-color: green;
+}
+
+footer {
+    background-color: #9CAF88;
+    font-family: "Garamond";
+    color:#DFE6DA
+
+}
+
+.footerp{
+    overflow: clip;
+    height: 150px;
+    padding-top: 0;
+}
+
+label {
+  white-space: nowrap; 
+  display: inline-block; 
+}
+
+.container{
+    display: flex;
+    p{
+        padding: 0 5 0 0;
+    }
+}

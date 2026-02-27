@@ -1,0 +1,289 @@
+<!--
+Program name: patient-form.html
+Author: Misa Huynh
+Date created: 02/24/2026
+Date last edited: 02/24/2026
+Version: 1.0
+Description: Patient Registration Form for the medical industry
+-->
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<header>
+    <div class="banner">
+        <table class="banner-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="SubtleMedical.png" alt="logo" class="logo">
+                    </td>
+                    <td>
+                        <h1>
+                            Subtle Medical
+                        </h1>
+                    </td>
+                    <td class="date">
+                        Today's Date: 02/24/2026
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</header>
+<form action="thankyou.html">
+
+
+    <div>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><label for="user">User Name:</label></p>
+                    </td>
+                    <td>
+                        <input type="text" id="user" name="user" maxlength="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="password1">Password:</label></p>
+                    </td>
+                    <td>
+                        <p><input type="password" id="password1" name="password1"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="password2">Re-Enter Password:</label></p>
+                    </td>
+                    <td>
+                        <input type="password" id="password2" name="password2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="fname">Name:</label></p>
+                    </td>
+                    <td><input type="text" id="fname" name="fname" placeholder="First" maxlength="30"></td>
+
+                    <td><input type="text" id="middleinital" name="middleinital" placeholder="MI" maxlength="1"
+                            size="5"></td>
+
+                    <td><input type="text" id="lname" name="lname" placeholder="Last" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="birthdate">Date of Birth:</label></p>
+                    </td>
+                    <td><input type="date" id="birthdate" name="birthdate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="gender">Gender:</label></p>
+                    </td>
+
+                    <td><input type="radio" id="female" name="female" value="female">
+                        <label for="female">Female</label>
+                    </td>
+
+                    <td>
+                        <input type="radio" id="male" name="male" value="male">
+                        <label for="male">Male</label>
+                    </td>
+                <tr>
+                    <td>
+                        <p>Marital Status:</p>
+                    </td>
+                    <td>
+                        <input type="radio" id="single" name="single" value="single">
+                        <label for="single">Single</label>
+                    </td>
+
+                    <td>
+                        <input type="radio" id="married" name="married" value="married">
+                        <label for="married">Married</label>
+                    </td>
+                    <td><input type="radio" id="divorced" name="divorced" value="divorced">
+                        <label for="divorced">Divorced</label>
+                    </td>
+
+                    <td><input type="radio" id="separated" name="separated" value="separated">
+                        <label for="separated">Separated</label>
+                    </td>
+
+                    <td><input type="radio" id="widow" name="widow" value="widow">
+                        <label for="widow">Widow</label>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="ss">Social Security:</label></p>
+                    </td>
+                    <td><input type="text" id="ss" name="ss" pattern="^\d{3}-\d{2}-\d{4}$" minlength="9" maxlength="11"
+                            title="111-11-1111" placeholder="XXX-XX-XXXX"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><label for="address1">Address 1:</label></p>
+                    </td>
+                    <td><input for="text" id="address1" name="address1" maxlength="30"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><label for="address2">Address 2:</label></p>
+                    </td>
+                    <td><input for="text" id="address2" name="address2" maxlength="30"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><label for="city">City:</label></p>
+                    </td>
+                    <td><input for="text" id="city" name="city" maxlength="30"></td>
+                    <td>
+                        <div class="container">
+                            <p><label for="state">State:</label></p>
+                            <select>
+                                <option disabled selected value="">Select State</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AR">AR</option>
+                                <option value="AZ">AZ</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DC">DC</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="IA">IA</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="MA">MA</option>
+                                <option value="MD">MD</option>
+                                <option value="ME">ME</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MO">MO</option>
+                                <option value="MS">MS</option>
+                                <option value="MT">MT</option>
+                                <option value="NC">NC</option>
+                                <option value="NE">NE</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NV">NV</option>
+                                <option value="NY">NY</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WI">WI</option>
+                                <option value="WV">WV</option>
+                                <option value="WY">WY</option>
+                            </select>
+
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="container">
+                            <p><label for="zipcode">Zip Code:</label></p>
+                            <input type="text" id="zipcode" name="zipcode" pattern="^\d{5}(?:-?\d{4})?$"
+                                title="xxxxx OR xxxxx-xxxx" size="10">
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="email">Email:</label></p>
+                    </td>
+                    <td><input type="email" id="email" name="email"
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i" title="example@example.com">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+    <br>
+    <p for="allgeries">Any medication allergies?
+    </p>
+    <input type="checkbox" id="med1" name="med1" value="amoxicillin">
+    <label for="med1">amoxicillin</label><br>
+    <input type="checkbox" id="med2" name="med2" value="ibuprofen">
+    <label for="med2"> ibuprofen</label><br>
+    <input type="checkbox" id="med3" name="med3" value="aspirin">
+    <label for="med3">aspirin</label><br>
+    <input type="checkbox" id="med4" name="med4" value="naproxen">
+    <label for="med4">naproxen</label><br>
+    <input type="checkbox" id="med5" name="med5" value="carbamazepine">
+    <label for="med5">carbamazepine</label><br>
+    <br>
+    <p>Have you been vaccinated?</p>
+    <input type="radio" id="yes" name="yes" value="yes">
+    <label for="yes">Yes</label>
+    <br>
+    <input type="radio" id="no" name="no" value="no">
+    <label for="no">No</label>
+    <br>
+    <br>
+    <p for="wellness">How are you feeling today?</p>
+    <label for="bad">1</label>
+    <input class="range-slider" type="range" id="wellness" name="wellness" min="1" max="10">
+    <label for="bad">10</label>
+    <br>
+    <br>
+    <p><label for="question">Are there any other health concerns you would like to discuss during your visit?</label>
+    </p>
+    <textarea rows="4" cols="61"></textarea>
+    <br>
+    <br>
+    <input type="button" value="Clear">
+    <input type="submit" value="Submit">
+    </label>
+</form>
+
+<div>
+    <footer>
+        <br>
+        Subtle Medical
+        <br>
+        BOX 35513
+        <br>
+        Houston, TX 77055
+        <br>
+        <img src="google.png" alt="logo" class="footerp">
+        <br>
+        <button type="button">Contact Us!</button>
+    </footer>
+</div>
+
+</html>
