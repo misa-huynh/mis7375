@@ -4,7 +4,7 @@ Author: Misa Huynh
 Date created: 02/24/2026
 Date last edited: 02/24/2026
 Version: 1.0
-Description: Patient Registration Form for the medical industry
+Description: Homework 1 HTML 
 -->
 
 <!DOCTYPE html>
@@ -212,9 +212,6 @@ Description: Patient Registration Form for the medical industry
         </table>
 
     </div>
-
-
-
     <br>
     <p for="allgeries">Any medication allergies?
     </p>
@@ -238,10 +235,12 @@ Description: Patient Registration Form for the medical industry
     <br>
     <br>
     <p for="wellness">How are you feeling today?</p>
-    <label for="bad">1</label>
-    <input class="range-slider" type="range" id="wellness" name="wellness" min="1" max="10">
-    <label for="bad">10</label>
-    <br>
+    <div class="slider">
+        <label for="bad">1 - Bad</label>
+        <input class="range-slider" type="range" id="wellness" name="wellness" min="1" max="10">
+        <label for="amazing">10 - Amazing</label>
+        <br>
+    </div>
     <br>
     <p><label for="question">Are there any other health concerns you would like to discuss during your visit?</label>
     </p>
@@ -287,7 +286,7 @@ Description: Patient Registration Form for the medical industry
         <br>
         Subtle Medical
         <br>
-        BOX 35513
+        PO BOX 35513
         <br>
         Houston, TX 77055
         <br>

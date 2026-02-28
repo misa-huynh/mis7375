@@ -4,7 +4,7 @@ Author: Misa Huynh
 Date created: 02/24/2026
 Date last edited: 02/24/2026
 Version: 1.0
-Description: Patient Registration Form for thwe medical industry
+Description: Homework 1 CSS 
  */
 
 p {
@@ -86,4 +86,8 @@ label {
     p {
         padding: 0 5 0 0;
     }
+}
+
+.slider{
+    display: flex;
 }
