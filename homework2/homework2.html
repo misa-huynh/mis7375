@@ -1,0 +1,662 @@
+<!--
+Program name: patient-form.html
+Author: Misa Huynh
+Date created: 03/11/2026
+Date last edited: 03/11/2026
+Version: 2.0
+Description: Homework 2 HTML 
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <link
+      href="homework2.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <script src="homework2.js"></script>
+
+  <!-- Header to display the logo, company name, and date. -->
+  <header>
+    <div class="banner">
+      <table class="banner-table">
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="SubtleMedical.png"
+                alt="logo"
+                class="logo"
+              />
+            </td>
+            <td>
+              <h1>Subtle Medical</h1>
+            </td>
+            <td class="date">
+              Today's Date:
+              <script type="text/javascript">
+                document.write(new Date().toLocaleDateString());
+              </script>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </header>
+
+  <!-- Form used to collect all patient data -->
+  <form
+    name="signup"
+    id="signup"
+    form
+    action="thankyou.html"
+  >
+    <div>
+      <h2>Patient Information</h2>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td>
+              <p><label for="fname">Name:</label></p>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="fname"
+                name="First Name"
+                placeholder="First"
+                maxlength="30"
+                onBlur="fNameValidation()"
+                title="Max 30 characters. No special characters. No numbers."
+                pattern="^[A-Za-z]+(?:[\\s\\'-][A-Za-z]+)*$"
+                required
+              />
+            </td>
+
+            <td>
+              <input
+                type="text"
+                id="middleinital"
+                name="Middle Initial"
+                placeholder="MI"
+                maxlength="1"
+                size="5"
+                onBlur="middleinitalValidation()"
+                title="Max 1 character. No special characters. No numbers."
+                pattern="^[a-zA-Z]{1}$"
+              />
+            </td>
+
+            <td>
+              <input
+                type="text"
+                id="lname"
+                name="Last Name"
+                placeholder="Last"
+                maxlength="30"
+                onBlur="lNameValidation()"
+                title="Max 30 characters. No special characters. No numbers."
+                pattern="^[a-zA-Z2-5'-]+$"
+                required
+              />
+            </td>
+          </tr>
+          <tr id="error-name">
+            <td></td>
+            <td id="error-fname"></td>
+            <td id="error-middleinital"></td>
+            <td id="error-lname"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="birthdate">Date of Birth:</label></p>
+            </td>
+            <td>
+              <input
+                type="date"
+                id="birthdate"
+                name="Date of Birth"
+                onBlur="birthdateValidation()"
+                title="Vaild Date of Birth"
+                min="1906-03-19"
+                max="2026-03-19"
+                required
+              />
+            </td>
+          </tr>
+          <tr id="error-name">
+            <td></td>
+            <td id="error-birthdate"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="Gender">Gender:</label></p>
+            </td>
+
+            <td>
+              <input
+                type="radio"
+                id="female"
+                name="Gender"
+                value="female"
+                required
+              />
+              <label for="female">Female</label>
+            </td>
+
+            <td>
+              <input
+                type="radio"
+                id="male"
+                name="Gender"
+                value="male"
+              />
+              <label for="male">Male</label>
+            </td>
+          </tr>
+          <tr>
+            <td id="error-gender"></td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Marital Status:</p>
+            </td>
+            <td>
+              <input
+                type="radio"
+                id="single"
+                name="Martial Status"
+                value="single"
+                required
+              />
+              <label for="single">Single</label>
+            </td>
+            <td>
+              <input
+                type="radio"
+                id="married"
+                name="Marital Status"
+                value="married"
+              />
+              <label for="married">Married</label>
+            </td>
+            <td>
+              <input
+                type="radio"
+                id="divorced"
+                name="Martial Status"
+                value="divorced"
+              />
+              <label for="divorced">Divorced</label>
+            </td>
+
+            <td>
+              <input
+                type="radio"
+                id="separated"
+                name="Martial Status"
+                value="separated"
+              />
+              <label for="separated">Separated</label>
+            </td>
+
+            <td>
+              <input
+                type="radio"
+                id="widow"
+                name="Martial Status"
+                value="widow"
+              />
+              <label for="widow">Widow</label>
+            </td>
+          </tr>
+          <tr>
+            <td id="error-martial"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="ss">Social Security:</label></p>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="ss"
+                name="Social Security"
+                pattern="^\d{3}\d{2}\d{4}$"
+                minlength="9"
+                maxlength="9"
+                title="111111111"
+                placeholder="XXXXXXXXX"
+                onBlur="ssValidation()"
+                title="Enter your 9 Digit Social Secruity. XXXXXXXXX Format."
+                required
+              />
+            </td>
+            <tr>
+              <th class=patient2 colspan="6"><hr><h2>Place of Residence</h2></th>
+            </tr>
+          </tr>
+          <tr id="error-ss">
+            <td></td>
+            <td id="error-ss"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="address1">Address 1:</label></p>
+            </td>
+            <td>
+              <input
+                for="text"
+                id="address1"
+                name="Address #1"
+                minlength="2"
+                maxlength="30"
+                onBlur="address1Validation()"
+                title="Max 30 characters. No special characters. At least 1 number."
+                pattern="\d{1,}[a-zA-Z0-9\s]+"
+                required
+              />
+            </td>
+          </tr>
+          <tr id="error-address1">
+            <td></td>
+            <td id="error-address1"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="address2">Address 2:</label></p>
+            </td>
+            <td>
+              <input
+                for="text"
+                id="address2"
+                name="Address #2"
+                minlength="2"
+                maxlength="30"
+                onBlur="address2Validation()"
+                title="Max 30 characters. No special characters. At least 1 number."
+                pattern="\d{1,}[a-zA-Z0-9\s]+"
+              />
+            </td>
+          </tr>
+          <tr id="error-address2">
+            <td></td>
+            <td id="error-address2"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="city">City:</label></p>
+            </td>
+            <td>
+              <input
+                type="text"
+                for="text"
+                id="city"
+                name="City"
+                minlength="2"
+                maxlength="30"
+                onBlur="cityValidation()"
+                title="Max 30 characters. No special characters. No numbers."
+                pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"
+                required
+              />
+            </td>
+
+            <td>
+              <div class="container">
+                <p><label for="state">State:</label></p>
+                <select
+                  id="state"
+                  name="State"
+                  onBlur="stateValidation()"
+                >
+                  <option
+                    disabled
+                    selected
+                    value=""
+                    title="Select a State"
+                  >
+                    Select State
+                  </option>
+                  <option value="AL">AL</option>
+                  <option value="AK">AK</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="ND">ND</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="PR">PR</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VT">VT</option>
+                  <option value="VA">VA</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <div class="container">
+                <p><label for="zipcode">Zip Code:</label></p>
+                <input
+                  type="text"
+                  id="zipcode"
+                  name="Zip Code"
+                  pattern="^\d{5}(?:-?\d{4})?$"
+                  title="Format as xxxxx OR xxxxx-xxxx"
+                  minlength="5"
+                  maxlength="10"
+                  size="10"
+                  onBlur="zipcodeValidation()"
+                  required
+                />
+              </div>
+            </td>
+          </tr>
+          <tr id="error-location">
+            <td></td>
+            <td id="error-city"></td>
+            <td id="error-state"></td>
+            <td></td>
+            <td id="error-zipcode"></td>
+          </tr>
+          <tr> <th class=patient2 colspan="6"><hr><h2>Contact Information</h2></th></tr>
+          <tr>
+            <td>
+              <p><label for="email">Email:</label></p>
+            </td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
+                title="Format as example@example.com"
+                onBlur="emailValidation()"
+                required
+              />
+            </td>
+          </tr>
+          <tr></tr>
+          <tr id="error">
+            <td></td>
+            <td id="error-email"></td>
+          </tr>
+          <tr>
+            <td>
+              <p><label for="phone">Phone:</label></p>
+            </td>
+            <td>
+              <input
+                type="tel"
+                id="phone"
+                name="Phone"
+                maxlength="12"
+                placeholder="000-000-0000"
+                pattern="[0-9]\d{2}-\d{3}-\d{4}"
+                title="Format as 000-000-0000"
+                onBlur="phoneValidation()"
+                required
+              />
+            </td>
+          </tr>
+          <tr></tr>
+          <tr id="error">
+            <td></td>
+            <td id="error-phone"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr class=patient2><h2>Patient's Medical History</h2>
+    <p for="allgeries">Any medication allergies?</p>
+    <input
+      type="checkbox"
+      id="med1"
+      name="Medication Allergies"
+      value="amoxicillin"
+    />
+    <label for="med1">amoxicillin</label><br />
+    <input
+      type="checkbox"
+      id="med2"
+      name="Medication Allergies"
+      value="ibuprofen"
+    />
+    <label for="med2"> ibuprofen</label><br />
+    <input
+      type="checkbox"
+      id="med3"
+      name="Medication Allergies"
+      value="aspirin"
+    />
+    <label for="med3">aspirin</label><br />
+    <input
+      type="checkbox"
+      id="med4"
+      name="Medication Allergies"
+      value="naproxen"
+    />
+    <label for="med4">naproxen</label><br />
+    <input
+      type="checkbox"
+      id="med5"
+      name="Medication Allergies"
+      value="carbamazepine"
+    />
+    <label for="med5">carbamazepine</label><br />
+    <br />
+    <p>Have you been vaccinated?</p>
+    <input
+      type="radio"
+      id="yes"
+      name="Vaccination Status"
+      value="yes"
+      required
+    />
+    <label for="yes">Yes</label>
+    <br />
+    <input
+      type="radio"
+      id="no"
+      name="Vaccination Status"
+      value="no"
+    />
+    <label for="no">No</label>
+    <div id="error-vaccinated"></div>
+    <br />
+    <p for="wellness">How are you feeling today?</p>
+    <div class="slider">
+      <label for="bad">1 - Bad</label>
+      <input
+        class="range-slider"
+        type="range"
+        id="wellness"
+        name="Wellness Scale"
+        value="1"
+        min="1"
+        max="10"
+        oninput="updateRangeValue()"
+      />
+      <label for="amazing">10 - Amazing</label>
+      <br />
+    </div>
+    <div
+      id="wellness-result"
+      class="slider-number"
+    ></div>
+    <br />
+    <p>
+      <label for="question"
+        >Are there any other health concerns you would like to discuss during
+        your visit?</label
+      >
+    </p>
+    <textarea
+      rows="4"
+      cols="61"
+      onBlur="questionValidation()"
+      name="Health Concerns"
+      pattern='^[^\"]*$'
+    ></textarea>
+    <br />
+    <hr class=patient2><h2>Create a Patient Account</h2>
+    <table>
+      <tr>
+        <td>
+          <p><label for="user">User Name:</label></p>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="user"
+            name="User"
+            minlength="5"
+            maxlength="20"
+            onBlur="userValidation()"
+            title="5-30 characters. No special characters. No first character as number. No spaces."
+            pattern="^[a-zA-Z][a-zA-Z0-9_-]*$"
+            required
+          />
+        </td>
+      </tr>
+      <tr id="error-user">
+        <td></td>
+        <td id="error-user"></td>
+      </tr>
+      <tr>
+        <td>
+          <p><label for="password1">Password:</label></p>
+        </td>
+        <td>
+          <p>
+            <input
+              type="password"
+              id="password1"
+              name="Password"
+              onBlur="password1Validation()"
+              onInput="password1Validation()"
+              onFocus="password1Validation()"
+              title="Must have at least 8 characters and no more than 30 characters long and contain at least 1 upper case latter, 1 number and 1 special character."
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,30}$"
+              required
+            />
+          </p>
+        </td>
+      </tr>
+      <tr id="error-password1">
+        <td></td>
+        <td id="error-password1"></td>
+      </tr>
+      <tr>
+        <td>
+          <p><label for="password2">Re-Enter Password:</label></p>
+        </td>
+        <td>
+          <input
+            type="password"
+            id="password2"
+            name="Re-Enter Password"
+            onBlur="password2Validation()"
+            onInput="password2Validation()"
+            onFocus="password2Validation()"
+            title="Re-enter your Password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,30}$"
+            required
+          />
+        </td>
+      </tr>
+      <tr id="error-password2">
+        <td></td>
+        <td id="error-password2"></td>
+      </tr>
+    </table>
+    <br />
+    <input
+      type="button"
+      name="clear"
+      value="Clear"
+      title="Clear form"
+    />
+    <input
+      type="button"
+      name="review"
+      id="review"
+      value="Review"
+      onclick="reviewInput()"
+      title="Review form"
+    />
+
+    <input
+      type="submit"
+      name="submit"
+      value="Submit"
+      title="Submit"
+      onclick="onSubmitValidation()"
+    />
+  </form>
+
+  <div id="showReview">
+  </div>
+
+  <!-- Footer to display address and contact info -->
+  <div>
+    <footer>
+      <br />
+      Subtle Medical
+      <br />
+      PO BOX 35513
+      <br />
+      Houston, TX 77055
+      <br />
+      <img
+        src="google.png"
+        alt="logo"
+        class="footerp"
+      />
+      <br />
+      <button type="button">Contact Us!</button>
+    </footer>
+  </div>
+</html>
