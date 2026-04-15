@@ -1,0 +1,140 @@
+/* 
+Program name: patient-form.html
+Author: Misa Huynh
+Date created: 04/08/2026
+Date last edited: 04/08/2026
+Version: 3.0
+Description: Homework 3 CSS 
+ */
+
+p {
+    color: #758467;
+    font-family: "Times New Roman";
+    margin: auto;
+}
+
+textarea { 
+    width: 100%
+}
+
+body {
+    background-color: #DFE6DA;
+}
+
+h1 {
+    color: #DFE6DA;
+    font-family: "Garamond";
+}
+
+h2 {
+    color: #758467;
+    margin-bottom: 1%;
+    font-size: large;
+}
+
+.error {
+    height: 40px;
+}
+
+.error-single{
+    height: 20px;
+    font-size: x-small
+}
+.error span{
+    font-size: x-small;
+}
+
+.logo {
+    overflow: clip;
+    height: 150px
+}
+
+.banner {
+    background-color: #819171;
+}
+
+.date {
+    vertical-align: bottom;
+    text-align: right;
+    color: #DFE6DA
+}
+
+.banner-table {
+    width: 100%;
+}
+
+.table-label {
+    text-align: right;
+    align-items: center;
+}
+
+td {
+    /* border-style: solid; */
+    overflow: hidden;
+    min-width: 100px;
+}
+
+.range-slider {
+    width: 80%;
+    accent-color: green;
+}
+
+footer {
+    background-color: #9CAF88;
+    font-family: "Garamond";
+    color: #DFE6DA
+}
+
+.footerp {
+    overflow: clip;
+    height: 150px;
+    padding-top: 0;
+}
+
+label {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+
+    p {
+        padding: 0 5 0 0;
+    }
+}
+
+.slider{
+    display: flex;
+}
+
+.slider-number{
+    display: flex;
+    align-items: center;
+}
+
+.slider-font{
+    color: black;
+}
+
+.patient2{
+    text-align: left;
+}
+
+.review-container{
+    background-color: #819171;
+    margin: 1em;
+    color: white;
+    text-align: center;
+    h2{
+        color: white;
+    }
+}
+.outputdata{
+    color: white;
+    background-color: #9CAF88
+}
+
+.review-table{
+    width: 100%;
+}
