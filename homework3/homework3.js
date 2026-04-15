@@ -24,6 +24,9 @@ function reviewInput() {
     if (name == "review") {
       continue;
     }
+     if (name == "validate") {
+      continue;
+    }
     if (dataType == "checkbox") {
       if (element.checked) {
         htmlOutput += "<tr><td align='right'>" + name + "</td>";
