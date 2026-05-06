@@ -72,6 +72,7 @@ Description: Homework 4 HTML
   >
     <div>
       <h2>Patient Information</h2>
+      <h2 class="note">Note: Fields in GREEN are REQUIRED.</h2>
       <table width="100%">
         <tbody>
           <tr>
@@ -82,6 +83,7 @@ Description: Homework 4 HTML
               <input
                 type="text"
                 id="fname"
+                class="required-input"
                 name="First Name"
                 placeholder="First"
                 maxlength="30"
@@ -113,6 +115,7 @@ Description: Homework 4 HTML
                 type="text"
                 id="lname"
                 name="Last Name"
+                class="required-input"
                 placeholder="Last"
                 maxlength="30"
                 onBlur="lNameValidation()"
@@ -138,6 +141,7 @@ Description: Homework 4 HTML
                 type="date"
                 id="birthdate"
                 name="Date of Birth"
+                class="required-input"
                 onBlur="birthdateValidation()"
                 oninput="birthdateValidation()"
                 title="Vaild Date of Birth"
@@ -259,6 +263,7 @@ Description: Homework 4 HTML
                 type="password"
                 id="ss"
                 name="Social Security"
+                class="required-input"
                 pattern="^\d{3}\d{2}\d{4}$"
                 minlength="9"
                 maxlength="9"
@@ -294,6 +299,7 @@ Description: Homework 4 HTML
                 for="text"
                 id="address1"
                 name="Address #1"
+                class="required-input"
                 minlength="2"
                 maxlength="30"
                 onBlur="address1Validation()"
@@ -340,6 +346,7 @@ Description: Homework 4 HTML
                 for="text"
                 id="city"
                 name="City"
+                class="required-input"
                 minlength="2"
                 maxlength="30"
                 onBlur="cityValidation()"
@@ -356,6 +363,7 @@ Description: Homework 4 HTML
                 <select
                   id="state"
                   name="State"
+                  class="required-input"
                   onBlur="stateValidation()"
                   oninput="stateValidation()"
                 >
@@ -429,6 +437,7 @@ Description: Homework 4 HTML
                   type="text"
                   id="zipcode"
                   name="Zip Code"
+                  class="required-input"
                   pattern="^\d{5}(?:-?\d{4})?$"
                   title="Format as xxxxx OR xxxxx-xxxx"
                   minlength="5"
@@ -465,6 +474,7 @@ Description: Homework 4 HTML
                 type="email"
                 id="email"
                 name="Email"
+                class="required-input"
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
                 title="Format as example@example.com"
                 onBlur="emailValidation()"
@@ -487,6 +497,7 @@ Description: Homework 4 HTML
                 type="tel"
                 id="phone"
                 name="Phone"
+                class="required-input"
                 maxlength="12"
                 placeholder="000-000-0000"
                 pattern="[0-9]\d{2}-\d{3}-\d{4}"
@@ -615,6 +626,7 @@ Description: Homework 4 HTML
             type="text"
             id="user"
             name="User"
+            class="required-input"
             minlength="5"
             maxlength="20"
             onBlur="userValidation()"
@@ -647,6 +659,7 @@ Description: Homework 4 HTML
               type="password"
               id="password1"
               name="Password"
+              class="required-input"
               onBlur="password1Validation()"
               onInput="password1Validation()"
               onFocus="password1Validation()"
@@ -670,6 +683,7 @@ Description: Homework 4 HTML
             type="password"
             id="password2"
             name="Re-Enter Password"
+            class="required-input"
             onBlur="password2Validation()"
             onInput="password2Validation()"
             onFocus="password2Validation()"

@@ -138,3 +138,12 @@ label {
 .review-table{
     width: 100%;
 }
+
+.required-input {
+    background-color: #b8edad;
+    border: 1px solid #4caf50;
+}
+
+.note {
+    color: #4caf50
+}

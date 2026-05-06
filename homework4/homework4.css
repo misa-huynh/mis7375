@@ -226,3 +226,12 @@ label {
   color: rgb(50, 88, 137);
   margin: 15px 0;
 }
+
+.required-input {
+  background-color: #b8edad;
+  border: 1px solid #4caf50;
+}
+
+.note {
+  color: #4caf50
+}
