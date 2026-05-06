@@ -1,0 +1,228 @@
+/* 
+Program name: homework4.css
+Author: Misa Huynh
+Date created: 04/23/2026
+Date last edited: 04/23/2026
+Version: 4.0
+Description: Homework 4 CSS 
+ */
+
+p {
+  color: #758467;
+  font-family: "Times New Roman";
+  margin: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  width: 95%;
+}
+
+body {
+  background-color: #dfe6da;
+  padding-bottom: 150px;
+}
+
+h1 {
+  color: #dfe6da;
+  font-family: "Garamond";
+}
+
+h2 {
+  color: #758467;
+  margin-bottom: 1%;
+  font-size: large;
+}
+
+.error {
+  height: 40px;
+}
+
+.error-single {
+  height: 20px;
+  font-size: x-small;
+}
+.error span {
+  font-size: x-small;
+}
+
+.logo {
+  overflow: clip;
+  height: 150px;
+}
+
+.banner {
+  background-color: #9caf88;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.date {
+  vertical-align: bottom;
+  text-align: right;
+  color: #dfe6da;
+}
+
+.banner-table {
+  width: 100%;
+}
+
+.table-label {
+  text-align: right;
+  align-items: center;
+}
+
+td {
+  /* border-style: solid; */
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.range-slider {
+  width: 80%;
+  accent-color: green;
+}
+
+footer {
+  padding: 10px;
+  font-family: "Garamond";
+  color: #dfe6da;
+}
+
+.footerp {
+  overflow: clip;
+  height: 150px;
+  padding-top: 0;
+}
+
+label {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+
+  p {
+    padding: 0 5 0 0;
+  }
+}
+
+.slider {
+  display: flex;
+}
+
+.slider-number {
+  display: flex;
+  align-items: center;
+}
+
+.slider-font {
+  color: black;
+}
+
+.patient2 {
+  text-align: left;
+}
+
+.review-container {
+  background-color: #819171;
+  margin: 1em;
+  color: white;
+  text-align: center;
+  h2 {
+    color: white;
+  }
+}
+
+.outputdata {
+  color: white;
+  background-color: #9caf88;
+}
+
+.review-table {
+  width: 100%;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #9caf88;
+}
+.display-name {
+  color: white;
+}
+
+.image-container {
+  padding-right: 10px;
+}
+
+.buttons {
+  height: 30px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.popup-container {
+  background: rgba(230, 230, 230, 0.9);
+  margin: 5% auto;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 850px;
+  margin-inline: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.popup-warning h1 {
+  color: #758467;
+}
+.popup-warning p {
+  color: black;
+}
+
+.popup-session-timeout {
+  display: none;
+}
+.popup-session-timeout h1 {
+  color: #758467;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #758467;
+  color: white;
+}
+
+.countdown-timer {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: rgb(50, 88, 137);
+  margin: 15px 0;
+}
